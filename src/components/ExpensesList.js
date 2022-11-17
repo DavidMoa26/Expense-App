@@ -1,5 +1,4 @@
 import React from 'react';
-import ExpenseItem from './ExpenseItem';
 import Item from "./Item";
 
 const ExpensesList = (props) => {
@@ -11,12 +10,12 @@ const ExpensesList = (props) => {
   }
 
   return <ul className="expenses-list">
-     {props.items.map((expense) => (
+    {props.items.map((expense) => (
       <Item
         key={expense.id}
         title={expense.title}
         amount={"$" + expense.amount}
-        date={expense.date}      
+        date={expense.date}
       />
     ))}
   </ul>
